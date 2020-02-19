@@ -24,7 +24,7 @@ const showPage = (studentList, startingPage) => {
     }
 }
 
-/*** Creates the pagination according to the studentList it gets and studentPerPage number set ***/
+/*** Creates the pagination, enables to switch pages ***/
 const appendPageLinks =  (studentList) => {
   const numberOfPages = Math.ceil(studentList.length/studentPerPage);
   const activePage = 1;
