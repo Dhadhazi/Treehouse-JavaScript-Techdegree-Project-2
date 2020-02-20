@@ -27,7 +27,6 @@ const showPage = (studentList, startingPage) => {
 /*** Creates the pagination, enables to switch pages ***/
 const appendPageLinks =  (studentList) => {
   const numberOfPages = Math.ceil(studentList.length/studentPerPage);
-  const activePage = 1;
 
   const paginationDiv = document.createElement('div'); //creates DIV for the pagination
     paginationDiv.className = 'pagination';
@@ -45,7 +44,7 @@ const appendPageLinks =  (studentList) => {
     const link = document.createElement('a'); //creates the link
       link.href = '#'; //so the number is clickable
       link.text = i+1;
-      if (i === 0) { link.className = 'active'};
+      if (i === 0) { link.className = 'active'}
       paginationLi.appendChild(link);
     
     link.addEventListener('click', (e) => {  //Event listener for every link, changes classname, calls showpage
